@@ -21,14 +21,19 @@ def setup_google_credentials():
         
         credentials_file = os.getenv('GOOGLE_SERVICE_ACCOUNT_FILE', '/app/credentials.json')
         
+        # Criar diretório se necessário
+        credentials_dir = os.path.dirname(credentials_file)
+        if credentials_dir:
+            os.makedirs(credentials_dir, exist_ok=True)
+        
         with open(credentials_file, 'w') as f:
             f.write(credentials_json)
         
-        print(f"Credenciais do Google configuradas em: {credentials_file}")
+        print(f"✅ Credenciais do Google configuradas em: {credentials_file}")
         return True
         
     except Exception as e:
-        print(f"Erro ao configurar credenciais: {e}")
+        print(f"❌ Erro ao configurar credenciais: {e}")
         return False
 
 if __name__ == '__main__':
