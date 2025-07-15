@@ -8,6 +8,16 @@
 logs/
 *.log
 
+# Arquivos de deploy específicos
+docker-compose*.yml
+railway.json
+fly.toml
+generate_credentials_base64.py
+
+# Credenciais Google
+credentials.json
+service-account-*.json
+
 # Python
 __pycache__/
 *.py[cod]
