@@ -11,4 +11,6 @@ services:
   - key: TZ
     value: America/Sao_Paulo
   - key: RENDER
-    value: "true" 
+    value: "true"
+  - key: RENDER_EXTERNAL_URL
+    value: "https://finance-controller-bot.onrender.com" 
